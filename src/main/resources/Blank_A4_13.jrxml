@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_13" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7c7315b-f958-45da-95aa-bd31789e267a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jsonData"/>
+	<queryString language="json">
+		<![CDATA[report]]>
+	</queryString>
+	<field name="headerData" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="headerData"/>
+		<fieldDescription><![CDATA[headerData]]></fieldDescription>
+	</field>
+	<field name="setParamsList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="setParamsList"/>
+		<fieldDescription><![CDATA[setParamsList]]></fieldDescription>
+	</field>
+	<field name="stepDataList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="stepDataList"/>
+		<fieldDescription><![CDATA[stepDataList]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="10" width="300" height="30" uuid="75d7f6e0-830e-462b-8b0c-85e0d0453376"/>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Pressure Hold Test]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="467" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="200" height="50" uuid="a7dffe83-00f1-4aa6-b8d5-74b64a541185"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("headerData")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Blank_A4_14.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="60" width="200" height="71" uuid="0a1eee5a-9485-4738-86a3-d52400e9314c"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("setParamsList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Blank_A4_15.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="160" width="200" height="110" uuid="60da241b-b54d-419d-a0e4-b1fc78255246"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("stepDataList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Blank_A4_17.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

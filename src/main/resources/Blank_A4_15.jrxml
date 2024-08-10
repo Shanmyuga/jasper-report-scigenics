@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_15" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2ec22410-cf2e-46b8-b5d8-60f8043c01e7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="jsonData"/>
+	<queryString language="json">
+		<![CDATA[report.setParamsList]]>
+	</queryString>
+	<field name="batchSetParamName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="batchSetParamName"/>
+		<fieldDescription><![CDATA[batchSetParamName]]></fieldDescription>
+	</field>
+	<field name="batchSetParamValue" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="batchSetParamValue"/>
+		<fieldDescription><![CDATA[batchSetParamValue]]></fieldDescription>
+	</field>
+	<field name="batchSetParamUnits" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="batchSetParamUnits"/>
+		<fieldDescription><![CDATA[batchSetParamUnits]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="28" width="193" height="30" uuid="cf2b7f3d-6c1f-427a-b1a9-ec5a17f71246"/>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Set Parameters]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" uuid="f36f0b24-7d6d-4596-8bc9-0e1a4d1c580b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ab98280-f700-48f0-beff-4c23c658c8b1"/>
+				</reportElement>
+				<text><![CDATA[batchSetParamName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" uuid="7a01e4a8-27fa-4c70-acb4-b3146a4810e1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a0a6ebdd-4866-497f-a334-fd27654721b2"/>
+				</reportElement>
+				<text><![CDATA[batchSetParamValue]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="93c138cf-2bb9-4630-bedc-38972084eee0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11e0dc6f-d5ff-4627-a7e7-e7090e88cd46"/>
+				</reportElement>
+				<text><![CDATA[batchSetParamUnits]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="185" height="30" uuid="99c1ca8c-c574-406f-b1b0-71b0ecf5d5aa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ab98280-f700-48f0-beff-4c23c658c8b1"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{batchSetParamName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="185" y="0" width="185" height="30" uuid="bc152d29-387f-47b0-9a0c-d5fc1eb88545">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a0a6ebdd-4866-497f-a334-fd27654721b2"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{batchSetParamValue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="370" y="0" width="185" height="30" uuid="33fd6544-b88d-483f-b384-3c30f1157f76">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11e0dc6f-d5ff-4627-a7e7-e7090e88cd46"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{batchSetParamUnits}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

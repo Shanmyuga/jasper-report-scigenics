@@ -1,0 +1,128 @@
+{"report" :{
+    "headerData": {
+        "batchId": "test1",
+        "startDateTime": "07-08-2024 04:34:29",
+        "endDateTime": "07-08-2024 04:40:59",
+        "duration": "0:06:30",
+        "processName": "Pressure Hold Test"
+    },
+    "setParamsList": [
+        {
+            "batchSetParamName": "PHT_AIR_FLRT_SP",
+            "batchSetParamValue": "7.5",
+            "batchSetParamUnits": "NLPM"
+        },
+        {
+            "batchSetParamName": "PHT_PDROP_SP",
+            "batchSetParamValue": "0.2",
+            "batchSetParamUnits": "BAR"
+        },
+        {
+            "batchSetParamName": "PHT_PR_HOLD_SP",
+            "batchSetParamValue": "2",
+            "batchSetParamUnits": "MINUTES"
+        },
+        {
+            "batchSetParamName": "PHT_PR_SP",
+            "batchSetParamValue": "1",
+            "batchSetParamUnits": "BAR"
+        },
+        {
+            "batchSetParamName": "PHT_ST_TMR_SP",
+            "batchSetParamValue": "2",
+            "batchSetParamUnits": "MINUTES"
+        }
+    ],
+    "stepDataList": [
+        {
+            "batchStep": "F1_50L_PHT_OP",
+            "logTime": "07-08-2024 04:34:29",
+            "intervalTime": "07-08-2024 04:35:29",
+            "actualValuesList": []
+        },
+        {
+            "batchStep": "F1_50L_PHT_SCM",
+            "logTime": "07-08-2024 04:34:32",
+            "intervalTime": "07-08-2024 04:35:29",
+            "actualValuesList": []
+        },
+        {
+            "batchStep": "BATCH_START",
+            "logTime": "07-08-2024 04:34:32",
+            "intervalTime": "07-08-2024 04:35:29",
+            "actualValuesList": []
+        },
+        {
+            "batchStep": "PRESSURIZATION",
+            "logTime": "07-08-2024 04:34:53",
+            "intervalTime": "07-08-2024 04:35:29",
+            "actualValuesList": []
+        },
+        {
+            "batchStep": "STABILIZATION",
+            "logTime": "07-08-2024 04:36:00",
+            "intervalTime": "07-08-2024 04:36:29",
+            "actualValuesList": [
+                {
+                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
+                    "getActualProcessVariableValue": "1",
+                    "getActualProcessVariableUnits": "BAR",
+                    "actualValueChangeTimeStamp": "07-08-2024 04:36:00"
+                }
+            ]
+        },
+        {
+            "batchStep": "PR_HOLD_ST",
+            "logTime": "07-08-2024 04:38:01",
+            "intervalTime": "07-08-2024 04:38:29",
+            "actualValuesList": [
+                {
+                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
+                    "getActualProcessVariableValue": "1",
+                    "getActualProcessVariableUnits": "BAR",
+                    "actualValueChangeTimeStamp": "07-08-2024 04:36:00"
+                }
+            ]
+        },
+        {
+            "batchStep": "DEPRESSUR_OK",
+            "logTime": "07-08-2024 04:40:14",
+            "intervalTime": "07-08-2024 04:40:29",
+            "actualValuesList": [
+                {
+                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
+                    "getActualProcessVariableValue": "1",
+                    "getActualProcessVariableUnits": "BAR",
+                    "actualValueChangeTimeStamp": "07-08-2024 04:36:00"
+                }
+            ]
+        },
+        {
+            "batchStep": "PR_HOLD_SUCCESS",
+            "logTime": "07-08-2024 04:40:57",
+            "intervalTime": "07-08-2024 04:41:29",
+            "actualValuesList": [
+                {
+                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
+                    "getActualProcessVariableValue": "0",
+                    "getActualProcessVariableUnits": "BAR",
+                    "actualValueChangeTimeStamp": "07-08-2024 04:40:57"
+                }
+            ]
+        },
+        {
+            "batchStep": "END",
+            "logTime": "07-08-2024 04:40:58",
+            "intervalTime": "07-08-2024 04:41:29",
+            "actualValuesList": [
+                {
+                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
+                    "getActualProcessVariableValue": "0",
+                    "getActualProcessVariableUnits": "BAR",
+                    "actualValueChangeTimeStamp": "07-08-2024 04:40:57"
+                }
+            ]
+        }
+    ]
+}
+}
