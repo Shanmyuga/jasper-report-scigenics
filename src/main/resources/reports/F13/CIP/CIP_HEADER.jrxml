@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CIP_HEADER" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CIP\cipDataAdapter.jrdax"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="json">
+		<![CDATA[report.headerData]]>
+	</queryString>
+	<field name="batchId" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="batchId"/>
+		<fieldDescription><![CDATA[batchId]]></fieldDescription>
+	</field>
+	<field name="startDateTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="startDateTime"/>
+		<fieldDescription><![CDATA[startDateTime]]></fieldDescription>
+	</field>
+	<field name="endDateTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="endDateTime"/>
+		<fieldDescription><![CDATA[endDateTime]]></fieldDescription>
+	</field>
+	<field name="duration" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="duration"/>
+		<fieldDescription><![CDATA[duration]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="300" y="10" width="263" height="62" uuid="bc1ce1da-8232-46ea-be55-cec4abb986dd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[CIP BATCH INFO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="e9d2002a-c8ee-4649-a258-640dad29110c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="200" height="15" forecolor="#736343" uuid="fe5229d3-5713-4b38-a230-255e87076818">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c87849a-8897-4b6f-b971-b2c33e7c4179"/>
+				</reportElement>
+				<text><![CDATA[BatchId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="0" width="200" height="15" forecolor="#736343" uuid="d78b6b34-1911-4295-aceb-5a95b812e28f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="755a93bb-6a3d-47e5-b48f-a8933fd7e034"/>
+				</reportElement>
+				<text><![CDATA[Start Date Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="0" width="200" height="15" forecolor="#736343" uuid="efa4b37e-800f-43f7-a3ef-bccb43bf1808">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17456b11-22df-4f29-a7b0-b61042362251"/>
+				</reportElement>
+				<text><![CDATA[End Date Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="600" y="0" width="200" height="15" forecolor="#736343" uuid="fdd5284d-763d-45ef-a53a-a7fbfbcf20f4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a781c3fe-34d8-4d6b-aa15-0c58240d4f5e"/>
+				</reportElement>
+				<text><![CDATA[Duration]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="fa7cec56-4ec1-48e6-a26e-7266a995d174"/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="0" y="0" width="200" height="15" uuid="d50c190c-0940-4f1f-9938-e9c59444688d">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c87849a-8897-4b6f-b971-b2c33e7c4179"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{batchId}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="200" y="0" width="200" height="15" uuid="1d4ddb78-ff73-4e01-a246-b36cb55bd889">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="755a93bb-6a3d-47e5-b48f-a8933fd7e034"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{startDateTime}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="400" y="0" width="200" height="15" uuid="67f3629b-c88f-45c3-8948-f6d897c7e7a9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17456b11-22df-4f29-a7b0-b61042362251"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{endDateTime}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="600" y="0" width="200" height="15" uuid="094e3d93-b37c-4a5f-aa00-b1e0d1eed976">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a781c3fe-34d8-4d6b-aa15-0c58240d4f5e"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{duration}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PHT_TREND2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3317ffec-298d-41e5-9d6d-3a567e1bd4c8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PHT\phtDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report.trendsmap.F13_20KL_TE_CHBR_DACA_DACA-PV.actualValueMap]]>
+	</queryString>
+	<field name="F13_20KL_TE_CHBR_DACA_DACA-PV" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="F13_20KL_TE_CHBR_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F13_20KL_TE_CHBR_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="logTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="logTime"/>
+		<fieldDescription><![CDATA[logTime]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="350" splitType="Stretch">
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="40" y="40" width="720" height="310" uuid="b466805e-1c51-4991-9db4-e57a39f01c45"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["TEMPERATURE_CHAMBER"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{logTime}]]></categoryExpression>
+						<valueExpression><![CDATA[FLOAT_VALUE($F{F13_20KL_TE_CHBR_DACA_DACA-PV})]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+			<staticText>
+				<reportElement x="280" y="4" width="240" height="30" uuid="8daa520f-93e2-49f2-9563-04b690e985ea"/>
+				<textElement textAlignment="Center">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Temperature trend]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

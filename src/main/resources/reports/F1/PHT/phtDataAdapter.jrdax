@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsonDataAdapter class="net.sf.jasperreports.data.json.JsonDataAdapterImpl">
+  <name>phtds</name>
+  <dataFile type="repositoryDataLocation">
+    <location>C:\Users\sunda\Downloads\phtreport1.json</location>
+  </dataFile>
+  <selectExpression></selectExpression>
+  <locale>en_IN</locale>
+  <timeZone>Asia/Calcutta</timeZone>
+  <useConnection>true</useConnection>
+  <language>json</language>
+</jsonDataAdapter>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FERMENTATION_TREND1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="142495ab-ee79-4f52-8d60-5a52a12175ae">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fermentation\fermDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report.trendsmap.F1_50L_PT_CHBR_DACA_DACA-PV.actualValueMap]]>
+	</queryString>
+	<field name="F1_50L_PT_CHBR_DACA_DACA-PV" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="F1_50L_PT_CHBR_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F1_50L_PT_CHBR_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="logTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="logTime"/>
+		<fieldDescription><![CDATA[logTime]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="490" splitType="Stretch">
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="50" y="34" width="684" height="456" uuid="adf03c79-5562-4377-a81c-22637f0d42c8"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Pressure Chamber"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{logTime}]]></categoryExpression>
+						<valueExpression><![CDATA[FLOAT_VALUE($F{F1_50L_PT_CHBR_DACA_DACA-PV})]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot labelRotation="90.0"/>
+					<categoryAxisFormat labelRotation="90.0">
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+			<staticText>
+				<reportElement x="300" y="0" width="181" height="41" uuid="4dbbc414-940f-4e0d-94a0-a2c4602bb53c"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Pressure]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

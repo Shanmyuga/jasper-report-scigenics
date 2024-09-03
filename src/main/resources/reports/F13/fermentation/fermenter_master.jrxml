@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fermenter_master" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6ad2ae9a-20a5-4027-a226-ea88711bde67">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fermentation\fermDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report]]>
+	</queryString>
+	<field name="headerData" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="headerData"/>
+		<fieldDescription><![CDATA[headerData]]></fieldDescription>
+	</field>
+	<field name="setParamsList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="setParamsList"/>
+		<fieldDescription><![CDATA[setParamsList]]></fieldDescription>
+	</field>
+	<field name="stepDataList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="stepDataList"/>
+		<fieldDescription><![CDATA[stepDataList]]></fieldDescription>
+	</field>
+	<field name="trendsmap" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="trendsmap"/>
+		<fieldDescription><![CDATA[trendsmap]]></fieldDescription>
+	</field>
+	<field name="trendsList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="trendsList"/>
+		<fieldDescription><![CDATA[trendsList]]></fieldDescription>
+	</field>
+	<field name="auditTrailList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="auditTrailList"/>
+		<fieldDescription><![CDATA[auditTrailList]]></fieldDescription>
+	</field>
+	<field name="alarmList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="alarmList"/>
+		<fieldDescription><![CDATA[alarmList]]></fieldDescription>
+	</field>
+	<background>
+		<band height="288" splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="520" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="10" width="760" height="100" uuid="26ffdf51-eb92-48ac-a1f5-a838e0d3c74b"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("headerData")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FERMENTATION_HEADER.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="110" width="760" height="90" uuid="14b63af9-bafc-42b0-b879-ef59559e7736"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("setParamsList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FERMENTATION_SETPARAM.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="200" width="760" height="115" uuid="36eabcaa-cda0-4b3b-910b-428286dd2617"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("stepDataList.actualValueMap")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FERMENTATION_STEPPARAM.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="320" width="760" height="110" uuid="182c4941-2327-4db7-97f6-ba528afc8f64"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("auditTrailList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FERMENTATION_AUDIT.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="430" width="760" height="80" uuid="c7672d4c-d214-4c23-bc80-3af8fc8a370d"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("alarmList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["fermentation_alarm.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="501" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="17" width="760" height="133" uuid="6e0ca3a9-b6da-4afa-83af-84a83a0c51d8"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("trendsmap.F13_20KL_PT_CHBR_DACA_DACA-PV.actualValueMap")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FERMENTATION_TREND1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="163" width="760" height="97" uuid="1fe1f330-c282-4724-930d-b4ac64dd12f3"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("trendsmap.F13_20KL_TE_CHBR_DACA_DACA-PV.actualValueMap")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["FREMENTATON_TREND2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

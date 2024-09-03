@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FERMENTATION_TREND3" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1a9d395-6c95-41f6-add7-52408ea5f1f0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fermentation\fermDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report.trendsmap.F1_50L_DOE_DACA_DACA-PV.actualValueMap]]>
+	</queryString>
+	<field name="F1_50L_DOE_DACA_DACA-PV" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="F1_50L_DOE_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F1_50L_DOE_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="logTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="logTime"/>
+		<fieldDescription><![CDATA[logTime]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="260" splitType="Stretch">
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="110" y="3" width="530" height="257" uuid="8e94b808-de3e-42d8-a9d3-414756065bba"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["DO"]]></seriesExpression>
+						<categoryExpression><![CDATA[0]]></categoryExpression>
+						<valueExpression><![CDATA[$F{F1_50L_DOE_DACA_DACA-PV}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot backgroundAlpha="0.96" labelRotation="90.0"/>
+					<categoryAxisFormat labelRotation="90.0">
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+			<staticText>
+				<reportElement x="337" y="-20" width="141" height="41" uuid="3ab7ca34-c525-414b-a702-01542216a6c3"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[DO]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

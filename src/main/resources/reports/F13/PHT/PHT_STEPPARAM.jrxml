@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PHT_STEPPARAM" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PHT\phtDataAdapter.jrdax"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="json">
+		<![CDATA[report.stepDataList.actualValueMap]]>
+	</queryString>
+	<field name="BatchStep" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="BatchStep"/>
+		<fieldDescription><![CDATA[BatchStep]]></fieldDescription>
+	</field>
+	<field name="logTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="logTime"/>
+		<fieldDescription><![CDATA[logTime]]></fieldDescription>
+	</field>
+	<field name="F13_20KL_PT_CHBR_DACA_DACA-PV" class="java.lang.Float">
+		<property name="net.sf.jasperreports.json.field.expression" value="F13_20KL_PT_CHBR_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F13_20KL_PT_CHBR_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="F13_20KL_TE_CHBR_DACA_DACA-PV" class="java.lang.Float">
+		<property name="net.sf.jasperreports.json.field.expression" value="F13_20KL_TE_CHBR_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F13_20KL_TE_CHBR_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="F13_20KL_PHT_SEQ_PR_SP_PR_SP-PV" class="java.lang.Float">
+		<property name="net.sf.jasperreports.json.field.expression" value="F13_20KL_PHT_SEQ_PR_SP_PR_SP-PV"/>
+		<fieldDescription><![CDATA[F13_20KL_PHT_SEQ_PR_SP_PR_SP-PV]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="280" height="62" uuid="bc1ce1da-8232-46ea-be55-cec4abb986dd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[BATCH STEP INFO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="e9d2002a-c8ee-4649-a258-640dad29110c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="160" height="15" forecolor="#736343" uuid="4777404d-4b29-42ef-b169-9b2cba8e4763">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6786e75e-2147-47b8-9f85-ab1422aecbc4"/>
+				</reportElement>
+				<text><![CDATA[Batch Step]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="160" y="0" width="160" height="15" forecolor="#736343" uuid="db7a3c03-e05c-46cd-94ea-f08bcc9a91de">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4cd9543e-b209-4d07-938b-b4ac0a25c46e"/>
+				</reportElement>
+				<text><![CDATA[Log Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="320" y="0" width="160" height="15" forecolor="#736343" uuid="9606c0dc-19dc-422b-902a-cb5a12eef506">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="663c5b10-1293-48cc-a8d1-f6082e6f118b"/>
+				</reportElement>
+				<text><![CDATA[PRESSURE_PV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="0" width="160" height="15" forecolor="#736343" uuid="cc0c8091-7925-423b-9e83-766dba76c462">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="43ffb332-d31e-4c10-8c24-e84c52a0dc93"/>
+				</reportElement>
+				<text><![CDATA[TEMPERATURE_PV]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="fa7cec56-4ec1-48e6-a26e-7266a995d174"/>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="0" y="0" width="160" height="15" uuid="491836b4-fc6f-4bd5-80d2-acd3c25889f9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6786e75e-2147-47b8-9f85-ab1422aecbc4"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{BatchStep}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="160" y="0" width="160" height="15" uuid="810ee004-2140-4269-9024-edeab2b3d270">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4cd9543e-b209-4d07-938b-b4ac0a25c46e"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{logTime}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="320" y="0" width="160" height="15" uuid="32ff5ae1-a824-4b08-9389-9e1519fbf3fe">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="663c5b10-1293-48cc-a8d1-f6082e6f118b"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{F13_20KL_PT_CHBR_DACA_DACA-PV}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" x="480" y="0" width="160" height="15" uuid="0df66460-1b7a-43da-8d1f-8d2977407635">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="43ffb332-d31e-4c10-8c24-e84c52a0dc93"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{F13_20KL_TE_CHBR_DACA_DACA-PV}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

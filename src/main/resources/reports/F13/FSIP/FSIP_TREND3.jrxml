@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FSIP_TREND3" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2a163a84-144d-40af-ae2f-b3440a8c16c5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FSIP\FSIPDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report.trendsmap.F13_20KL_TE2_VSLD_DACA_DACA-PV.actualValueMap]]>
+	</queryString>
+	<field name="F13_20KL_TE2_VSLD_DACA_DACA-PV" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="F13_20KL_TE2_VSLD_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F13_20KL_TE2_VSLD_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="logTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="logTime"/>
+		<fieldDescription><![CDATA[logTime]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="280" splitType="Stretch">
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="170" y="0" width="420" height="280" uuid="cf2ea74b-f0aa-4894-bc04-ccea56586922"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Temperature2"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{logTime}]]></categoryExpression>
+						<valueExpression><![CDATA[FLOAT_VALUE($F{F13_20KL_TE2_VSLD_DACA_DACA-PV})]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot labelRotation="90.0"/>
+					<categoryAxisFormat labelRotation="90.0">
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+			<staticText>
+				<reportElement x="335" y="-19" width="111" height="31" uuid="01d9b383-9839-483c-ada8-a2f57c4f9355"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Temperature3]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

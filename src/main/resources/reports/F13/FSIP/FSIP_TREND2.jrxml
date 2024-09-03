@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FSIP_TREND2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4cbb5822-3a6f-43a5-8475-755e7d3e984e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FSIP\FSIPDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report.trendsmap.F13_20KL_TE2_VSLD_DACA_DACA-PV.actualValueMap]]>
+	</queryString>
+	<field name="F13_20KL_TE1_EFD_DACA_DACA-PV" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="F13_20KL_TE1_EFD_DACA_DACA-PV"/>
+		<fieldDescription><![CDATA[F13_20KL_TE1_EFD_DACA_DACA-PV]]></fieldDescription>
+	</field>
+	<field name="logTime" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="logTime"/>
+		<fieldDescription><![CDATA[logTime]]></fieldDescription>
+	</field>
+	<group name="F13_20KL_TE1_EFD_DACA_DACA-PV">
+		<groupExpression><![CDATA[$F{F13_20KL_TE1_EFD_DACA_DACA-PV}]]></groupExpression>
+	</group>
+	<group name="logTime">
+		<groupExpression><![CDATA[$F{logTime}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="250" splitType="Stretch">
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="100" y="0" width="550" height="250" uuid="2d8b1a81-88b6-43db-904d-c694d47e573e"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Temperature1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{logTime}]]></categoryExpression>
+						<valueExpression><![CDATA[FLOAT_VALUE($F{F13_20KL_TE1_EFD_DACA_DACA-PV})]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot labelRotation="90.0"/>
+					<categoryAxisFormat labelRotation="90.0">
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+			<staticText>
+				<reportElement x="323" y="-21" width="137" height="30" uuid="be348cec-c549-4bf4-97b6-6a4c17768ee5"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Temperature1]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

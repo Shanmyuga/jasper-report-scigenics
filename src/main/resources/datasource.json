@@ -1,128 +1,409 @@
-{"report" :{
+{
+  "report": {
     "headerData": {
-        "batchId": "test1",
-        "startDateTime": "07-08-2024 04:34:29",
-        "endDateTime": "07-08-2024 04:40:59",
-        "duration": "0:06:30",
-        "processName": "Pressure Hold Test"
+      "batchId": "F1_PHT_REPORT1",
+      "startDateTime": "2024-08-29 10:10:22",
+      "endDateTime": "2024-08-29 10:15:47",
+      "duration": "0:05:25",
+      "processName": null
     },
     "setParamsList": [
-        {
-            "batchSetParamName": "PHT_AIR_FLRT_SP",
-            "batchSetParamValue": "7.5",
-            "batchSetParamUnits": "NLPM"
-        },
-        {
-            "batchSetParamName": "PHT_PDROP_SP",
-            "batchSetParamValue": "0.2",
-            "batchSetParamUnits": "BAR"
-        },
-        {
-            "batchSetParamName": "PHT_PR_HOLD_SP",
-            "batchSetParamValue": "2",
-            "batchSetParamUnits": "MINUTES"
-        },
-        {
-            "batchSetParamName": "PHT_PR_SP",
-            "batchSetParamValue": "1",
-            "batchSetParamUnits": "BAR"
-        },
-        {
-            "batchSetParamName": "PHT_ST_TMR_SP",
-            "batchSetParamValue": "2",
-            "batchSetParamUnits": "MINUTES"
-        }
+      {
+        "batchSetParamName": "PHT_AIR_FLRT_SP",
+        "batchSetParamValue": "7.5",
+        "batchSetParamUnits": "NLPM"
+      },
+      {
+        "batchSetParamName": "PHT_PDROP_SP",
+        "batchSetParamValue": "0.2",
+        "batchSetParamUnits": "BAR"
+      },
+      {
+        "batchSetParamName": "PHT_PR_HOLD_SP",
+        "batchSetParamValue": "2",
+        "batchSetParamUnits": "MINUTES"
+      },
+      {
+        "batchSetParamName": "PHT_PR_SP",
+        "batchSetParamValue": "1",
+        "batchSetParamUnits": "BAR"
+      },
+      {
+        "batchSetParamName": "PHT_ST_TMR_SP",
+        "batchSetParamValue": "1",
+        "batchSetParamUnits": "MINUTES"
+      }
     ],
     "stepDataList": [
-        {
-            "batchStep": "F1_50L_PHT_OP",
-            "logTime": "07-08-2024 04:34:29",
-            "intervalTime": "07-08-2024 04:35:29",
-            "actualValuesList": []
-        },
-        {
-            "batchStep": "F1_50L_PHT_SCM",
-            "logTime": "07-08-2024 04:34:32",
-            "intervalTime": "07-08-2024 04:35:29",
-            "actualValuesList": []
-        },
-        {
-            "batchStep": "BATCH_START",
-            "logTime": "07-08-2024 04:34:32",
-            "intervalTime": "07-08-2024 04:35:29",
-            "actualValuesList": []
-        },
-        {
-            "batchStep": "PRESSURIZATION",
-            "logTime": "07-08-2024 04:34:53",
-            "intervalTime": "07-08-2024 04:35:29",
-            "actualValuesList": []
-        },
-        {
-            "batchStep": "STABILIZATION",
-            "logTime": "07-08-2024 04:36:00",
-            "intervalTime": "07-08-2024 04:36:29",
-            "actualValuesList": [
-                {
-                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
-                    "getActualProcessVariableValue": "1",
-                    "getActualProcessVariableUnits": "BAR",
-                    "actualValueChangeTimeStamp": "07-08-2024 04:36:00"
-                }
-            ]
-        },
-        {
-            "batchStep": "PR_HOLD_ST",
-            "logTime": "07-08-2024 04:38:01",
-            "intervalTime": "07-08-2024 04:38:29",
-            "actualValuesList": [
-                {
-                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
-                    "getActualProcessVariableValue": "1",
-                    "getActualProcessVariableUnits": "BAR",
-                    "actualValueChangeTimeStamp": "07-08-2024 04:36:00"
-                }
-            ]
-        },
-        {
-            "batchStep": "DEPRESSUR_OK",
-            "logTime": "07-08-2024 04:40:14",
-            "intervalTime": "07-08-2024 04:40:29",
-            "actualValuesList": [
-                {
-                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
-                    "getActualProcessVariableValue": "1",
-                    "getActualProcessVariableUnits": "BAR",
-                    "actualValueChangeTimeStamp": "07-08-2024 04:36:00"
-                }
-            ]
-        },
-        {
-            "batchStep": "PR_HOLD_SUCCESS",
-            "logTime": "07-08-2024 04:40:57",
-            "intervalTime": "07-08-2024 04:41:29",
-            "actualValuesList": [
-                {
-                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
-                    "getActualProcessVariableValue": "0",
-                    "getActualProcessVariableUnits": "BAR",
-                    "actualValueChangeTimeStamp": "07-08-2024 04:40:57"
-                }
-            ]
-        },
-        {
-            "batchStep": "END",
-            "logTime": "07-08-2024 04:40:58",
-            "intervalTime": "07-08-2024 04:41:29",
-            "actualValuesList": [
-                {
-                    "actualProcessVariableName": "F1_50L_PT_CHBR.DACA.PV",
-                    "getActualProcessVariableValue": "0",
-                    "getActualProcessVariableUnits": "BAR",
-                    "actualValueChangeTimeStamp": "07-08-2024 04:40:57"
-                }
-            ]
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "F1_50L_PHT_OP",
+          "logTime": "2024-08-29 10:10:22"
         }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "F1_50L_PHT_SCM",
+          "logTime": "2024-08-29 10:10:24"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "BATCH_START",
+          "logTime": "2024-08-29 10:10:24"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "PRESSURIZATION",
+          "logTime": "2024-08-29 10:10:28"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "39",
+          "BatchStep": "PRESSURIZATION",
+          "logTime": "2024-08-29 10:12:10"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "36",
+          "BatchStep": "PRESSURIZATION",
+          "logTime": "2024-08-29 10:12:27"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "35",
+          "BatchStep": "PRESSURIZATION",
+          "logTime": "2024-08-29 10:12:40"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "PRESSURIZATION",
+          "logTime": "2024-08-29 10:14:14"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "PRESSURIZATION",
+          "logTime": "2024-08-29 10:14:21"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "STABILIZATION",
+          "logTime": "2024-08-29 10:14:25"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1.6",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "STABILIZATION",
+          "logTime": "2024-08-29 10:14:25"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1.6",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "STEPA",
+          "logTime": "2024-08-29 10:15:26"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1.6",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "DEPRESSUR_OK",
+          "logTime": "2024-08-29 10:15:27"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "DEPRESSUR_OK",
+          "logTime": "2024-08-29 10:15:42"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "1",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "PR_HOLD_SUCCESS",
+          "logTime": "2024-08-29 10:15:44"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "PR_HOLD_SUCCESS",
+          "logTime": "2024-08-29 10:15:44"
+        }
+      },
+      {
+        "batchStep": null,
+        "logTime": null,
+        "actualValueMap": {
+          "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+          "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+          "BatchStep": "END",
+          "logTime": "2024-08-29 10:15:45"
+        }
+      }
+    ],
+    "trendsmap": {
+      "F1_50L_PT_CHBR_DACA_DACA-PV": [
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+            "logTime": "2024-08-29 10:10:22"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_PT_CHBR_DACA_DACA-PV": "1",
+            "logTime": "2024-08-29 10:14:21"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_PT_CHBR_DACA_DACA-PV": "1.6",
+            "logTime": "2024-08-29 10:14:25"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_PT_CHBR_DACA_DACA-PV": "1",
+            "logTime": "2024-08-29 10:15:42"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_PT_CHBR_DACA_DACA-PV": "0",
+            "logTime": "2024-08-29 10:15:44"
+          }
+        }
+      ],
+      "F1_50L_TE_CHBR_DACA_DACA-PV": [
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+            "logTime": "2024-08-29 10:10:22"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_TE_CHBR_DACA_DACA-PV": "39",
+            "logTime": "2024-08-29 10:12:10"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_TE_CHBR_DACA_DACA-PV": "36",
+            "logTime": "2024-08-29 10:12:27"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_TE_CHBR_DACA_DACA-PV": "35",
+            "logTime": "2024-08-29 10:12:40"
+          }
+        },
+        {
+          "batchStep": null,
+          "logTime": null,
+          "actualValueMap": {
+            "F1_50L_TE_CHBR_DACA_DACA-PV": "37",
+            "logTime": "2024-08-29 10:14:14"
+          }
+        }
+      ]
+    },
+    "trendsList": null,
+    "auditTrailList": [
+      {
+        "logTimeStamp": "2024-08-29 10:10:28",
+        "actor": "ADMIN",
+        "categoryName": "OperatorChange",
+        "condition": "CHANGE",
+        "source": "F1_50L_PHT_SEQ",
+        "block": "START",
+        "value": "ON",
+        "description": "START.PV",
+        "areaName": "F1_50L",
+        "alarmUnit": null
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:10:43",
+        "actor": "ADMIN",
+        "categoryName": "OperatorChange",
+        "condition": "CHANGE",
+        "source": "F1_50L_PHT_SEQ",
+        "block": "PR_SP",
+        "value": "1.5",
+        "description": "PR_SP.PV",
+        "areaName": "F1_50L",
+        "alarmUnit": null
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:11:54",
+        "actor": "ADMIN",
+        "categoryName": "OperatorChange",
+        "condition": "CHANGE",
+        "source": "F1_50L_PHT_SEQ",
+        "block": "PR_SP",
+        "value": "1.2",
+        "description": "PR_SP.PV",
+        "areaName": "F1_50L",
+        "alarmUnit": null
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:12:04",
+        "actor": "ADMIN",
+        "categoryName": "OperatorChange",
+        "condition": "CHANGE",
+        "source": "F1_50L_PHT_SEQ",
+        "block": "PR_SP",
+        "value": "1.6",
+        "description": "PR_SP.PV",
+        "areaName": "F1_50L",
+        "alarmUnit": null
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:15:35",
+        "actor": "ADMIN",
+        "categoryName": "OperatorChange",
+        "condition": "CHANGE",
+        "source": "F1_50L_PHT_SEQ",
+        "block": "STAB_FAL_FL",
+        "value": "OFF",
+        "description": "STAB_FAL_FL.PV",
+        "areaName": "F1_50L",
+        "alarmUnit": null
+      }
+    ],
+    "alarmList": [
+      {
+        "logTimeStamp": "2024-08-29 10:12:10",
+        "actor": "",
+        "categoryName": "ProcessAlarm",
+        "condition": "PVHIGH",
+        "source": "F1_50L_TE_CHBR",
+        "block": "DACA",
+        "value": "39",
+        "description": "HIGH",
+        "areaName": "F1_50L",
+        "alarmUnit": "38.0"
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:12:27",
+        "actor": "",
+        "categoryName": "ProcessAlarm",
+        "condition": "PVHIGH",
+        "source": "F1_50L_TE_CHBR",
+        "block": "DACA",
+        "value": "36",
+        "description": "HIGH",
+        "areaName": "F1_50L",
+        "alarmUnit": "38.0"
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:12:40",
+        "actor": "",
+        "categoryName": "ProcessAlarm",
+        "condition": "PVLOW",
+        "source": "F1_50L_TE_CHBR",
+        "block": "DACA",
+        "value": "35",
+        "description": "LOW",
+        "areaName": "F1_50L",
+        "alarmUnit": "36.0"
+      },
+      {
+        "logTimeStamp": "2024-08-29 10:14:14",
+        "actor": "",
+        "categoryName": "ProcessAlarm",
+        "condition": "PVLOW",
+        "source": "F1_50L_TE_CHBR",
+        "block": "DACA",
+        "value": "37",
+        "description": "LOW",
+        "areaName": "F1_50L",
+        "alarmUnit": "36.0"
+      }
     ]
-}
+  }
 }

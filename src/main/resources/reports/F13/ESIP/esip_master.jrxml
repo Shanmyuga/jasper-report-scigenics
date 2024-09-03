@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pht_master" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32b2cbe6-90ca-4f49-a9aa-f9fa7b8a59ff">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ESIP\ESIPDataAdapter.jrdax"/>
+	<queryString language="json">
+		<![CDATA[report]]>
+	</queryString>
+	<field name="headerData" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="headerData"/>
+		<fieldDescription><![CDATA[headerData]]></fieldDescription>
+	</field>
+	<field name="setParamsList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="setParamsList"/>
+		<fieldDescription><![CDATA[setParamsList]]></fieldDescription>
+	</field>
+	<field name="stepDataList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="stepDataList"/>
+		<fieldDescription><![CDATA[stepDataList]]></fieldDescription>
+	</field>
+	<field name="trendsmap" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="trendsmap"/>
+		<fieldDescription><![CDATA[trendsmap]]></fieldDescription>
+	</field>
+	<field name="trendsList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="trendsList"/>
+		<fieldDescription><![CDATA[trendsList]]></fieldDescription>
+	</field>
+	<field name="auditTrailList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="auditTrailList"/>
+		<fieldDescription><![CDATA[auditTrailList]]></fieldDescription>
+	</field>
+	<field name="alarmList" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="alarmList"/>
+		<fieldDescription><![CDATA[alarmList]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="520" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="770" height="80" uuid="0d491e79-c876-41b3-ab4c-4187df69e402"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("headerData")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_HEADER.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="80" width="770" height="110" uuid="710afe38-fd41-4ac3-8270-aa5eb341d0e9"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("setParamsList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_SETPARAM.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="190" width="770" height="119" uuid="fa1f7588-e03d-4fd0-89e2-42a788fd99ef"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("stepDataList.actualValueMap")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_STEPPARAM.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="309" width="770" height="111" uuid="d537d625-9b2b-45ac-9570-4e244330ea4f"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("auditTrailList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_AUDIT.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="420" width="770" height="100" uuid="d4aefd2a-c3f2-4cc2-8318-cc50547bcb92"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("alarmList")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_ALARM.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="470" splitType="Stretch">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="10" width="770" height="150" uuid="b58ee877-79bc-4bd8-bc8b-b05db7943095"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("trendsmap.F13_20KL_PT_CHBR_DACA_DACA-PV.actualValueMap")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_TREND1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="175" width="770" height="105" uuid="14b569e3-12dc-4d2d-abd9-6f07fa22503f"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("trendsmap.F13_20KL_TE1_EFD_DACA_DACA-PV.actualValueMap")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_TREND2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="300" width="770" height="105" uuid="d6b1601a-d7e3-4e02-a6aa-51994b5c1ce5"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("trendsmap.F13_20KL_TE2_VSLD_DACA_DACA-PV.actualValueMap")
+
+]]></dataSourceExpression>
+				<subreportExpression><![CDATA["ESIP_TREND3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>
